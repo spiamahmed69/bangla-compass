@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="neu_bg">#F4F5FF</color>
+    <color name="neu_card">#FFFFFF</color>
+    <color name="neu_stroke">#E4E8EF</color>
+    <color name="neu_text">#2B2B2B</color>
+    <color name="neu_text_secondary">#7A8090</color>
+    <color name="neu_input">#FFFFFF</color>
+    <color name="orange">#FF9E1B</color>
+    <color name="accent">#7C3AED</color>
+    <color name="light_bg">#F4F5FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark_text">#2B2B2B</color>
+    <color name="neu_bg_dark">#1F1F23</color>
+    <color name="neu_card_dark">#2C2C31</color>
+    <color name="neu_stroke_dark">#3A3A40</color>
+    <color name="neu_text_dark">#F2F2F2</color>
+    <color name="neu_text_secondary_dark">#A8ADB8</color>
+    <color name="neu_input_dark">#2C2C31</color>
+</resources>
