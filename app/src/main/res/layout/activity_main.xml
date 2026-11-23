@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/viewSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="SP Compass"
+                android:textColor="#4C1D95"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="বাংলা কম্পাস — উত্তর, দক্ষিণ, পূর্ব, পশ্চিম মাপো"
+                android:textColor="#6B7280"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="কোন দিকে যেতে চাও? একটা দিক সিলেক্ট করো"
+                android:textColor="#1F2937"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:columnCount="2"
+                android:rowCount="4">
+
+                <Button android:id="@+id/btnN" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+                <Button android:id="@+id/btnNE" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+                <Button android:id="@+id/btnE" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+                <Button android:id="@+id/btnSE" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+                <Button android:id="@+id/btnS" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+                <Button android:id="@+id/btnSW" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+                <Button android:id="@+id/btnW" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+                <Button android:id="@+id/btnNW" android:layout_width="0dp" android:layout_height="72dp" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_button" android:textColor="#FFFFFF" android:textSize="16sp" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_glass"
+                android:padding="14dp"
+                android:text="সিলেক্ট করার পর কম্পাস ফুলস্ক্রিনে আসবে। নিচে দেখাবে এখন কত ডিগ্রিতে আছো, আর কত ডিগ্রি ডানে বা বামে ঘুরলেই তোমার দিকটা একদম সমান হবে।"
+                android:textColor="#374151"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:text="ডেভেলপার: সিয়াম আহম্মদ"
+                android:textColor="#6B7280"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewCompass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="লক্ষ্য: উত্তর (০°)"
+                android:textColor="#4C1D95"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.spcompass.app.CompassView
+                android:id="@+id/compassView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="০°"
+                android:textColor="#1F2937"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCurrentDir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="এখন: উত্তর"
+                android:textColor="#6B7280"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_button"
+                android:paddingLeft="20dp"
+                android:paddingTop="8dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="8dp"
+                android:text="আর একটু ঘোরো"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_glass"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="এখন তুমি ০°-তে আছো"
+                    android:textColor="#1F2937"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvGuide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="আর ০° ঘোরো"
+                    android:textColor="#374151"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbMatch"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="12dp"
+                    android:max="100"
+                    android:progress="100" />
+
+                <TextView
+                    android:id="@+id/tvMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="মিলেছে: ১০০%"
+                    android:textColor="#4C1D95"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/tvNorth" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/bg_glass" android:gravity="center" android:padding="10dp" android:text="উত্তর&#10;১০০%" android:textColor="#1F2937" android:textSize="15sp" />
+                <TextView android:id="@+id/tvSouth" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/bg_glass" android:gravity="center" android:padding="10dp" android:text="দক্ষিণ&#10;০%" android:textColor="#1F2937" android:textSize="15sp" />
+                <TextView android:id="@+id/tvEast" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/bg_glass" android:gravity="center" android:padding="10dp" android:text="পূর্ব&#10;০%" android:textColor="#1F2937" android:textSize="15sp" />
+                <TextView android:id="@+id/tvWest" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/bg_glass" android:gravity="center" android:padding="10dp" android:text="পশ্চিম&#10;০%" android:textColor="#1F2937" android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSensor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_glass"
+                android:padding="12dp"
+                android:text="সেন্সরের জন্য অপেক্ষা করছি…"
+                android:textColor="#374151"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvManualLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="পরীক্ষার জন্য হাতে ঘোরানো (সেন্সর নয়):"
+                android:textColor="#6B7280"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/sbManual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="359" />
+
+            <Button
+                android:id="@+id/btnChangeDir"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button"
+                android:text="দিক বদলাও"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="ডেভেলপার: সিয়াম আহম্মদ"
+                android:textColor="#6B7280"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
